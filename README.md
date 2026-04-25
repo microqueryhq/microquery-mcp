@@ -2,8 +2,8 @@
 
 MCP server for [Microquery](https://microquery.dev) — ask research questions
 about real-world data and get actual database records back. Works in Claude
-Desktop, Cursor, or any MCP-compatible AI host. Claude handles the SQL; you
-just ask the question.
+Desktop, Cursor, or any MCP-compatible AI host. Claude handles the SQL; you just
+ask the question.
 
 No wallet required. Auto-registers on first query and runs on $0.10 trial credit
 (~1,600 typical queries).
@@ -26,12 +26,12 @@ host.
 
 The easiest paths, in order of friction:
 
-**1. Registry install** *(TODO: publish to PyPI + submit to smithery.ai)* Find
-microquery in the Claude Desktop MCP marketplace or on
-[smithery.ai](https://smithery.ai) and click Install. No config editing needed.
+**1. Registry install** Find microquery in the Claude Desktop MCP marketplace or
+on [smithery.ai](https://smithery.ai) and click Install. No config editing
+needed.
 
-**2. `uvx` install** *(TODO: publish to PyPI as `microquery-mcp`)* Add one entry
-to `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or
+**2. `uvx` install** Add one entry to
+`~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or
 `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
 
 ```json
@@ -46,8 +46,8 @@ to `~/Library/Application Support/Claude/claude_desktop_config.json` (Mac) or
 ```
 
 `uvx` requires `uv` to be installed separately
-([astral.sh/uv](https://astral.sh/uv)). Once installed, Claude Desktop will
-pick it up automatically.
+([astral.sh/uv](https://astral.sh/uv)). Once installed, Claude Desktop will pick
+it up automatically.
 
 **3. Manual install** *(developers)* Download `microquery_mcp.py` from this repo
 and point your host at it:
@@ -88,9 +88,9 @@ documentation for the exact config format.
 1. Subsequent calls use the stored key — no configuration needed.
 1. The new account starts with 100,000 µUSDC ($0.10) trial credit, covering
    roughly 1,600 typical queries.
-1. When trial credit runs low the server automatically tops up the account
-   (up to 10 times, $2 each). Once the free allowance is exhausted a
-   checkout URL is returned — visit it to add USDC and continue querying.
+1. When trial credit runs low the server automatically tops up the account (up
+   to 10 times, $2 each). Once the free allowance is exhausted a checkout URL is
+   returned — visit it to add USDC and continue querying.
 
 ## Available datasets
 
