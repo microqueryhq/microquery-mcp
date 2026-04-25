@@ -1,0 +1,23 @@
+{
+  "$schema": "https://registry.modelcontextprotocol.io/schema/server.json",
+  "name": "io.github.microqueryhq/microquery-mcp",
+  "description": "Ask research questions about real-world data and get actual database records back — FDA adverse events, SEC filings, clinical trials, genomic variants, blockchain/DeFi, FEC contributions, CVEs, arXiv/PubMed, and more. Claude handles the SQL; you just ask the question. TB-scale, updated regularly. Zero config: auto-registers on first query, no API key or wallet required.",
+  "repository": {
+    "url": "https://github.com/microqueryhq/microquery-mcp",
+    "source": "github",
+    "id": "microqueryhq/microquery-mcp"
+  },
+  "version": "1.0.0",
+  "icon": "https://microquery.dev/favicon.png",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "microquery-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeHint": "uvx"
+    }
+  ]
+}

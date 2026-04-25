@@ -1,0 +1,60 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties: {}
+    description: >
+      No configuration required. Microquery auto-registers on first query
+      using your OS username and stores an API key in ~/.microquery/token.
+      100,000 µUSDC ($0.10) trial credit is provided automatically.
+  commandFunction: |
+    () => ({ command: "uvx", args: ["microquery-mcp"] })
+
+name: microquery
+displayName: Microquery
+description: >
+  Ask research questions about real-world data and get actual database records
+  back — not web search summaries, not cached statistics, not LLM hallucinations.
+  Claude handles the SQL; you just ask the question.
+
+  What people actually do with it: track metformin adverse events across four
+  years and cross-reference with pharmacogenomic variants to explain why GI
+  events dominate; watch DeFi liquidation cascades unfold against TVL drawdowns
+  in near real-time; trace which senators received the most PAC contributions
+  by cycle; surface CVEs scored above 9.0 in the last 30 days; compare arXiv
+  preprint volume against peer-reviewed publication rates for any research topic.
+
+  Cross-domain queries are the killer use case — combine SEC financials with
+  FEC political donations, FDA adverse events with genomic variants, or arXiv
+  preprint trends with PubMed publication rates, all in a single session
+  without any ETL.
+
+  Datasets: FDA adverse events (FAERS), SEC EDGAR filings, clinical trials,
+  ClinVar genetic variants, ClinPGx pharmacogenomics, GWAS associations,
+  arXiv preprints, PubMed, Ethereum and Bitcoin on-chain data, Base L2,
+  DeFi TVL and liquidations, FEC political contributions, FRED economic series,
+  NVD/CVE vulnerabilities, OSV advisories, OFAC sanctions, FHFA house prices,
+  and more. TB-scale, updated regularly.
+
+  Zero config: auto-registers on first query using your OS username. No API
+  key, no wallet, no account creation. Runs on $0.10 trial credit (~1,600
+  typical queries).
+
+homepage: https://microquery.dev
+icon: https://microquery.dev/favicon.png
+repository: https://github.com/microqueryhq/microquery-mcp
+
+tags:
+  - sql
+  - database
+  - analytics
+  - public-data
+  - fda
+  - sec
+  - blockchain
+  - clinical-trials
+  - genomics
+  - security
+  - research
+  - cross-domain
+  - no-api-key
