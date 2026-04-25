@@ -1,5 +1,7 @@
 # microquery-mcp
 
+<!-- mcp-name: io.github.microqueryhq/microquery-mcp -->
+
 MCP server for [Microquery](https://microquery.dev) — ask research questions
 about real-world data and get actual database records back. Works in Claude
 Desktop, Cursor, or any MCP-compatible AI host. Claude handles the SQL; you just

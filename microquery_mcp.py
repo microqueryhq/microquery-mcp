@@ -468,7 +468,7 @@ def main() -> None:
                 "jsonrpc": "2.0", "id": msg_id, "result": {
                     "protocolVersion": "2025-11-25",
                     "capabilities": {"tools": {}},
-                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.0"},
+                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.1"},
                 },
             })
         elif method == "initialized":
