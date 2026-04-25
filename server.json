@@ -7,13 +7,13 @@
     "source": "github",
     "id": "microqueryhq/microquery-mcp"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "icon": "https://microquery.dev/favicon.png",
   "packages": [
     {
       "registryType": "pypi",
       "identifier": "microquery-mcp",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "transport": {
         "type": "stdio"
       },

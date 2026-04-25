@@ -113,12 +113,17 @@ database or field names to use — schema is the ground truth.
    - arxiv.papers                       → submitted (timestamp)
    - fec.contributions                  → cycle (integer, e.g. 2024)
 
-3. **Arrays**: index with arr[0] for first element.  UNNEST() returns 0 rows
+3. **Date functions**: DATE_TRUNC takes a keyword interval, NOT a string:
+   - CORRECT: `DATE_TRUNC(DAY, block_timestamp)`, `DATE_TRUNC(MONTH, block_timestamp)`
+   - WRONG:   `DATE_TRUNC('day', block_timestamp)` — returns 502
+   - EXTRACT() is NOT supported — use DATE_TRUNC or integer partition keys instead.
+
+4. **Arrays**: index with arr[0] for first element.  UNNEST() returns 0 rows
    on nested arrays — avoid it.
 
-4. **Regex**: field ~ 'pattern'  (RE2 syntax; prefix (?i) for case-insensitive)
+5. **Regex**: field ~ 'pattern'  (RE2 syntax; prefix (?i) for case-insensitive)
 
-5. **No cross-database queries** — issue one query() call per database and
+6. **No cross-database queries** — issue one query() call per database and
    combine results yourself.
 
 ---
@@ -468,7 +473,7 @@ def main() -> None:
                 "jsonrpc": "2.0", "id": msg_id, "result": {
                     "protocolVersion": "2025-11-25",
                     "capabilities": {"tools": {}},
-                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.1"},
+                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.2"},
                 },
             })
         elif method == "initialized":
