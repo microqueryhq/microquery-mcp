@@ -100,7 +100,8 @@ database or field names to use — schema is the ground truth.
 ## Sneller SQL — important notes
 
 1. **Reserved words** must be double-quoted when used as column names:
-   "value", "date", "eol", "latest", "end"
+   "value", "date", "eol", "latest", "end", "by"
+   (hackernews.items has a `by` column — always write `"by"` in SQL)
 
 2. **Partition keys** drastically reduce scan cost.  Always include them
    (call list_databases() for the authoritative up-to-date list):
@@ -473,7 +474,7 @@ def main() -> None:
                 "jsonrpc": "2.0", "id": msg_id, "result": {
                     "protocolVersion": "2025-11-25",
                     "capabilities": {"tools": {}},
-                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.2"},
+                    "serverInfo": {"name": "microquery-mcp", "version": "1.0.3"},
                 },
             })
         elif method == "initialized":
